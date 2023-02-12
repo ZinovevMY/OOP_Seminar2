@@ -30,6 +30,6 @@ public class Crocodile extends Predator implements Sayable, Runable, Swimmable{
 
     @Override
     public String Say() {
-        return "SHSH";
+        return String.format("%s говорит SHSH", super.getName());
     }
 }

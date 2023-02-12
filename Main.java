@@ -8,13 +8,13 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Animal> animals = List.of(new Cow("Зорька"), new Crocodile("Гена"), new Lion("Симба"),
-                new Goat("Маруся"));
+                new Goat("Маруся"), new Duck("Дональд"), new Dolphin("Флиппер"));
 
         Zoo zoo = new Zoo(animals, new Radio());
         zoo.addAnimal(animals);
 
         for (Animal an: zoo.getAnimals()){
-            System.out.println(an.say());
+            System.out.println(an.Say());
         }
     }
 }

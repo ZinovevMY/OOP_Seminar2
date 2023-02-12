@@ -10,7 +10,7 @@ public class Goat extends Herbivores implements Sayable, Runable {
 
     @Override
     public String Say() {
-        return "BEEEEEEE";
+        return String.format("%s говорит BEEEEEEE", super.getName());
     }
 
     @Override

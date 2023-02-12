@@ -15,7 +15,7 @@ public class Cow extends Herbivores implements Sayable{
 
     @Override
     public String Say() {
-        return "MUUUU";
+        return String.format("%s говорит MUUUU", super.getName());
     }
 
 

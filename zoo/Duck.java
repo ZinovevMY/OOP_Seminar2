@@ -2,7 +2,7 @@ package zoo;
 
 import zoo.radio.Sayable;
 
-public class Duck extends Animal implements Flyable, Sayable, Swimmable{
+public class Duck extends Predator implements Flyable, Sayable, Swimmable{
 
     public Duck(String name){
         super(name);
@@ -35,6 +35,6 @@ public class Duck extends Animal implements Flyable, Sayable, Swimmable{
 
     @Override
     public String Say() {
-        return "Krya-Krya";
+        return String.format("%s говорит Krya-Krya", super.getName());
     }
 }
