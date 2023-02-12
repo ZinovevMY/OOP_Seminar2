@@ -29,6 +29,9 @@ public abstract class Animal implements Sayable {
         if (this instanceof Flyable){
             sb.append("Скорость полета = " + ((Flyable)this).getFlySpeed());
         }
+        if (this instanceof Swimmable){
+            sb.append("Скорость плавания = " + ((Swimmable)this).getSwimSpeed());
+        }
         return String.format(sb + " %s ест %s", this.name, this.feed());
     }
 }

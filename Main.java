@@ -1,8 +1,7 @@
+
 import zoo.*;
 import zoo.radio.Radio;
-import zoo.radio.Sayable;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -16,5 +15,26 @@ public class Main {
         for (Animal an: zoo.getAnimals()){
             System.out.println(an.Say());
         }
+
+        System.out.println("-------------------");
+        for (Runable animal: zoo.getRunable()){
+            System.out.println(((Animal)animal).getName());
+            System.out.println(((Animal)animal).Say());
+            System.out.println("Бегает со скоростью " + animal.getspeed() + "\n");
+        }
+        System.out.println("-------------------");
+        for (Flyable animal: zoo.getFlyable()){
+            System.out.println(((Animal)animal).getName());
+            System.out.println(((Animal)animal).Say());
+            System.out.println("Летает со скоростью " + animal.getFlySpeed() + "\n");
+        }
+        System.out.println("-------------------");
+        for (Swimmable animal: zoo.getSwimmable()){
+            System.out.println(((Animal)animal).getName());
+            System.out.println(((Animal)animal).Say());
+            System.out.println("Плавает со скоростью " + animal.getSwimSpeed() + "\n");
+        }
+
     }
 }
+
